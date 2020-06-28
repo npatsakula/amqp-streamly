@@ -5,12 +5,16 @@
 
 packages:
 - completed:
-    hackage: docker-0.6.0.4@sha256:3540f151e02273909f85b152ee42b0801bc195de349c360889e30b39a19e1b1c,4044
+    name: testcontainers
+    version: 0.1.0.0
+    git: https://github.com/blackheaven/testcontainers-hs.git
     pantry-tree:
-      size: 654
-      sha256: 49c29aa711d1bf5ba0c7bef3e7d968aaf4f4eb793b69b8814ba082317e580ff5
+      size: 898
+      sha256: dbc126b69dcfe9b423e7648e7ecf03a93c367c267b802ee1f0d30dd059e5f7c3
+    commit: bf74848f19313e5708f78f9bef30cd588a7c9ea5
   original:
-    hackage: docker-0.6.0.4@sha256:3540f151e02273909f85b152ee42b0801bc195de349c360889e30b39a19e1b1c,4044
+    git: https://github.com/blackheaven/testcontainers-hs.git
+    commit: bf74848f19313e5708f78f9bef30cd588a7c9ea5
 snapshots:
 - completed:
     size: 496112

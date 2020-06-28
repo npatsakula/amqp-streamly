@@ -40,4 +40,5 @@ tests:
     - amqp-streamly
     - bytestring >= 0.10.10.0 && < 0.11
     - hspec >= 2.7.1 && < 2.8
-    - docker >= 0.6.0.4 && < 0.7
+    - process >= 1.6.8.0 && < 1.7
+    - testcontainers == 0.1.*
