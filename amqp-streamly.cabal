@@ -4,13 +4,13 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: ecb20fdc8502e9ae651a4edbd03fdfe63e193bd25eba5681fe016e17b0eb098f
+-- hash: 12d7b6fb1d3da6a6da9f0769f11d261769c8ee0f8ec6e302b18d756e3ac46127
 
 name:           amqp-streamly
 version:        0.1.0
-synopsis:       A simpler streamly wrapper for amqp
-description:    Please see the README on GitHub at <https://github.com/blackheaven/amqp-streamly#readme>
-category:       streamly, conduit
+synopsis:       A simple streamly wrapper for amqp
+description:    A simple streamly wrapper for amqp. Provides two functions `produce` and `consume`.
+category:       streamly, conduit, amqp, rabbitmq
 homepage:       https://github.com/blackheaven/amqp-streamly#readme
 bug-reports:    https://github.com/blackheaven/amqp-streamly/issues
 author:         Gautier DI FOLCO

@@ -5,19 +5,15 @@ license:             BSD3
 author:              "Gautier DI FOLCO"
 maintainer:          "gautier.difolco@gmail.com"
 copyright:           "Gautier DI FOLCO"
+description:         A simple streamly wrapper for amqp. Provides two functions `produce` and `consume`.
 
 extra-source-files:
 - README.md
 - ChangeLog.md
 
 # Metadata used when publishing your package
-synopsis:            A simpler streamly wrapper for amqp
-category:            streamly, conduit
-
-# To avoid duplicated efforts in documentation and dealing with the
-# complications of embedding Haddock markup inside cabal files, it is
-# common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/blackheaven/amqp-streamly#readme>
+synopsis:            A simple streamly wrapper for amqp
+category:            streamly, conduit, amqp, rabbitmq
 
 dependencies:
 - base >= 4.7 && < 5
