@@ -1,5 +1,5 @@
 name:                amqp-streamly
-version:             0.1.0
+version:             0.2.0
 github:              "blackheaven/amqp-streamly"
 license:             BSD3
 author:              "Gautier DI FOLCO"
@@ -17,7 +17,7 @@ category:            streamly, conduit, amqp, rabbitmq
 
 dependencies:
 - base >= 4.7 && < 5
-- amqp >= 0.19.1 && < 0.20
+- amqp >= 0.19.1 && < 0.21
 - streamly >= 0.7.2 && < 0.8
 - text >= 1.2.4.0 && < 1.3
 
