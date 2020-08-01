@@ -4,10 +4,10 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 79a0a8b847e772e1360076bdd4b66d75215e67f21244904f4954ffee1cf9644c
+-- hash: 883a06194530c85ee177d2874920bdd083733790a52ce65cb49c188113a986f5
 
 name:           amqp-streamly
-version:        0.1.0
+version:        0.2.0
 synopsis:       A simple streamly wrapper for amqp
 description:    A simple streamly wrapper for amqp. Provides two functions `produce` and `consume`.
 category:       streamly, conduit, amqp, rabbitmq
