@@ -7,14 +7,35 @@ packages:
 - completed:
     name: testcontainers
     version: 0.1.0.0
-    git: https://github.com/blackheaven/testcontainers-hs.git
+    git: https://github.com/alexbiehl/testcontainers-hs.git
     pantry-tree:
-      size: 898
-      sha256: dbc126b69dcfe9b423e7648e7ecf03a93c367c267b802ee1f0d30dd059e5f7c3
-    commit: bf74848f19313e5708f78f9bef30cd588a7c9ea5
+      size: 900
+      sha256: da86d92089acbd4809411aa1fc5dd7af97c8f9b8daed4c476656b9885527c3b3
+    commit: 86247f834420f92959f9aa2693e404b979c8a9fb
   original:
-    git: https://github.com/blackheaven/testcontainers-hs.git
-    commit: bf74848f19313e5708f78f9bef30cd588a7c9ea5
+    git: https://github.com/alexbiehl/testcontainers-hs.git
+    commit: 86247f834420f92959f9aa2693e404b979c8a9fb
+- completed:
+    hackage: lens-4.19.2@sha256:f0570ca0e4624d9daa57256f00f514e87be155401583fa1665faba47376c63a7,16053
+    pantry-tree:
+      size: 8330
+      sha256: 97df1b96d825fb74400e75847e2a6ce2c37c9d1baeb71f5804a3a97694a4f881
+  original:
+    hackage: lens-4.19.2@sha256:f0570ca0e4624d9daa57256f00f514e87be155401583fa1665faba47376c63a7,16053
+- completed:
+    hackage: network-2.8.0.1@sha256:0f165dffa752d8cde30c2bde86f80609c4f1dc5eeb3182d593041f97839c5b3b,3011
+    pantry-tree:
+      size: 2488
+      sha256: 2dbdda2225969dcd452d983a2ac7e52341e5fc1df76103342c9fac08fc686931
+  original:
+    hackage: network-2.8.0.1@sha256:0f165dffa752d8cde30c2bde86f80609c4f1dc5eeb3182d593041f97839c5b3b,3011
+- completed:
+    hackage: unliftio-core-0.2.0.1@sha256:9b3e44ea9aacacbfc35b3b54015af450091916ac3618a41868ebf6546977659a,1082
+    pantry-tree:
+      size: 328
+      sha256: e81c5a1e82ec2cd68cbbbec9cd60567363abe02257fa1370a906f6754b6818b8
+  original:
+    hackage: unliftio-core-0.2.0.1@sha256:9b3e44ea9aacacbfc35b3b54015af450091916ac3618a41868ebf6546977659a,1082
 snapshots:
 - completed:
     size: 531701

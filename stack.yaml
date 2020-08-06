@@ -40,8 +40,12 @@ packages:
 #   commit: e7b331f14bcffb8367cd58fbfc8b40ec7642100a
 #
 extra-deps:
-- git: https://github.com/blackheaven/testcontainers-hs.git
-  commit: bf74848f19313e5708f78f9bef30cd588a7c9ea5
+- git: https://github.com/alexbiehl/testcontainers-hs.git
+  commit: 86247f834420f92959f9aa2693e404b979c8a9fb
+- lens-4.19.2@sha256:f0570ca0e4624d9daa57256f00f514e87be155401583fa1665faba47376c63a7,16053
+- network-2.8.0.1@sha256:0f165dffa752d8cde30c2bde86f80609c4f1dc5eeb3182d593041f97839c5b3b,3011
+- unliftio-core-0.2.0.1@sha256:9b3e44ea9aacacbfc35b3b54015af450091916ac3618a41868ebf6546977659a,1082
+
 
 # Override default flag values for local packages and extra-deps
 # flags: {}

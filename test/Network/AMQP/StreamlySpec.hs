@@ -17,6 +17,7 @@ import           TestContainers.Hspec
 import qualified Data.ByteString.Lazy.Char8    as B
 import           Data.Maybe                     ( fromJust )
 import qualified Data.Text                     as T
+import qualified Data.Text.Lazy                as TL
 import           System.Process                 ( readProcess )
 import qualified Streamly.Prelude              as S
 
@@ -32,7 +33,7 @@ spec =
         let arbitraryRoutingKey = "arbitraryRoutingKey"
         let arbitraryQueue      = "arbitraryQueue"
         let fixedInstructions =
-              SendInstructions arbitraryExchange arbitraryRoutingKey True
+              SendInstructions arbitraryExchange arbitraryRoutingKey False
         liftIO $ declareExchange
           channel
           newExchange { exchangeName = arbitraryExchange
@@ -74,21 +75,9 @@ mkChannel login password ip = do
   connection <- openConnection ip "/" login password
   openChannel connection
 
-getIp :: Container -> IO String
-getIp (Container id _ _) = format <$> readProcess
-  "docker"
-  [ "inspect"
-  , "-f"
-  , "'{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'"
-  , T.unpack id
-  ]
-  ""
-  where format = init . init . tail
-
 containers :: MonadDocker m => m Channel
 containers = do
   let (login, password) = ("guest", "guest")
-  container <- run (fromTag "rabbitmq:3.8.4") defaultContainerRequest
-  liftIO $ threadDelay $ 15 * 1000 * 1000
-  ip <- liftIO $ getIp container
-  liftIO $ mkChannel login password ip
+  container <- run $ containerRequest (fromTag "rabbitmq:3.8.4")
+    & setWaitingFor (waitForLogLine Stdout (" completed with " `TL.isInfixOf`))
+  liftIO $ mkChannel login password $ T.unpack $ containerIp container
