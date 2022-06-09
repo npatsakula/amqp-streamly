@@ -4,6 +4,11 @@
 # For advanced use and comprehensive documentation of the format, please see:
 # https://docs.haskellstack.org/en/stable/yaml_configuration/
 
+# A warning or info to be displayed to the user on config load.
+user-message: |
+  Warning (added by new or init): Some packages were found to be incompatible with the resolver and have been left commented out in the packages section.
+  You can omit this message by removing it from stack.yaml
+
 # Resolver to choose a 'specific' stackage snapshot or a compiler version.
 # A snapshot resolver dictates the compiler version and the set of packages
 # to be used for project dependencies. For example:
@@ -17,7 +22,7 @@
 #
 # resolver: ./custom-snapshot.yaml
 # resolver: https://example.com/snapshots/2018-01-01.yaml
-resolver: lts-16.4
+resolver: lts-19.10
 
 # User packages to be built.
 # Various formats can be used as shown in the example below.
@@ -29,7 +34,16 @@ resolver: lts-16.4
 #   - auto-update
 #   - wai
 packages:
-- .
+- dist-newstyle/tmp/src-190820/streamly-0.8.2
+- dist-newstyle/tmp/src-190820/streamly-0.8.2/benchmark
+- dist-newstyle/tmp/src-190820/streamly-0.8.2/docs
+- dist-newstyle/tmp/src-190820/streamly-0.8.2/test
+# The following packages have been ignored due to incompatibility with the
+# resolver compiler, dependency conflicts with other packages
+# or unsatisfied dependencies.
+#- .
+#- dist-newstyle/tmp/src-190820/streamly-0.8.2/benchmark/bench-report
+
 # Dependency packages to be pulled from upstream that are not in the resolver.
 # These entries can reference officially published versions as well as
 # forks / in-progress versions pinned to a git hash. For example:
@@ -39,9 +53,7 @@ packages:
 # - git: https://github.com/commercialhaskell/stack.git
 #   commit: e7b331f14bcffb8367cd58fbfc8b40ec7642100a
 #
-extra-deps:
-- git: https://github.com/blackheaven/testcontainers-hs.git
-  commit: bf74848f19313e5708f78f9bef30cd588a7c9ea5
+# extra-deps: []
 
 # Override default flag values for local packages and extra-deps
 # flags: {}
@@ -54,7 +66,7 @@ extra-deps:
 #
 # Require a specific version of stack, using version ranges
 # require-stack-version: -any # Default
-# require-stack-version: ">=2.3"
+# require-stack-version: ">=2.7"
 #
 # Override the architecture used by stack, especially useful on Windows
 # arch: i386

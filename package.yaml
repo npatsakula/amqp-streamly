@@ -1,5 +1,5 @@
 name:                amqp-streamly
-version:             0.2.0
+version:             0.2.1
 github:              "blackheaven/amqp-streamly"
 license:             BSD3
 author:              "Gautier DI FOLCO"
@@ -16,10 +16,10 @@ synopsis:            A simple streamly wrapper for amqp
 category:            streamly, conduit, amqp, rabbitmq
 
 dependencies:
-- base >= 4.7 && < 5
-- amqp >= 0.19.1 && < 0.21
-- streamly >= 0.7.2 && < 0.8
-- text >= 1.2.4.0 && < 1.3
+- base
+- amqp
+- streamly
+- text
 
 library:
   source-dirs: src
@@ -34,7 +34,7 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - amqp-streamly
-    - bytestring >= 0.10.10.0 && < 0.11
-    - hspec >= 2.7.1 && < 2.8
-    - process >= 1.6.8.0 && < 1.7
-    - testcontainers == 0.1.*
+    - bytestring
+    - hspec
+    - process
+    - testcontainers
