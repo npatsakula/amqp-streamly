@@ -1,4 +1,5 @@
 {-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE FlexibleContexts #-}
 
 module Network.AMQP.StreamlySpec
   ( main
@@ -14,6 +15,7 @@ import           Control.Monad.IO.Class         ( liftIO )
 import           Network.AMQP
 import           Test.Hspec
 import           TestContainers.Hspec
+import qualified TestContainers.Docker as D
 import qualified Data.ByteString.Lazy.Char8    as B
 import           Data.Maybe                     ( fromJust )
 import qualified Data.Text                     as T
@@ -74,13 +76,13 @@ mkChannel login password ip = do
   connection <- openConnection ip "/" login password
   openChannel connection
 
-getIp :: Container -> IO String
-getIp (Container id _ _) = format <$> readProcess
+getIp :: D.Container -> IO String
+getIp c = format <$> readProcess
   "docker"
   [ "inspect"
   , "-f"
   , "'{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'"
-  , T.unpack id
+  , T.unpack $ D.containerId c
   ]
   ""
   where format = init . init . tail
@@ -88,7 +90,7 @@ getIp (Container id _ _) = format <$> readProcess
 containers :: MonadDocker m => m Channel
 containers = do
   let (login, password) = ("guest", "guest")
-  container <- run (fromTag "rabbitmq:3.8.4") defaultContainerRequest
+  container <- run (containerRequest $ fromTag "rabbitmq:3.8.4")
   liftIO $ threadDelay $ 15 * 1000 * 1000
   ip <- liftIO $ getIp container
   liftIO $ mkChannel login password ip

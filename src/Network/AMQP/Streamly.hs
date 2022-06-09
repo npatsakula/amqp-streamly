@@ -17,8 +17,8 @@ import           Control.Monad.IO.Class         ( MonadIO
 
 import           Data.Text                      ( Text )
 import           Network.AMQP
-import           Streamly
-import qualified Streamly.Internal.Prelude     as S
+import           Streamly.Prelude
+import qualified Streamly.Internal.Data.Stream.IsStream.Common     as S
 import qualified Streamly.Prelude              as S
 
 -- | Informations to be sent

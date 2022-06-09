@@ -3,21 +3,10 @@
 # For more information, please see the documentation at:
 #   https://docs.haskellstack.org/en/stable/lock_files
 
-packages:
-- completed:
-    name: testcontainers
-    version: 0.1.0.0
-    git: https://github.com/blackheaven/testcontainers-hs.git
-    pantry-tree:
-      size: 898
-      sha256: dbc126b69dcfe9b423e7648e7ecf03a93c367c267b802ee1f0d30dd059e5f7c3
-    commit: bf74848f19313e5708f78f9bef30cd588a7c9ea5
-  original:
-    git: https://github.com/blackheaven/testcontainers-hs.git
-    commit: bf74848f19313e5708f78f9bef30cd588a7c9ea5
+packages: []
 snapshots:
 - completed:
-    size: 531701
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/16/4.yaml
-    sha256: d6119cdacc6d6b39c0bb8f6e11e8db6a21e92a38552e0d553414ba346592b53f
-  original: lts-16.4
+    sha256: 005f204647467d65c4ab549a5ca35d54b3d90a84a99a4ffc5d421a4018854fe2
+    size: 618509
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/19/10.yaml
+  original: lts-19.10
