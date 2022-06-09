@@ -3,10 +3,31 @@
 # For more information, please see the documentation at:
 #   https://docs.haskellstack.org/en/stable/lock_files
 
-packages: []
+packages:
+- completed:
+    hackage: streamly-0.8.2@sha256:ec521b7c1c4db068501c35804af77f40b7d34232f5e29d9b99e722229040eb80,23500
+    pantry-tree:
+      size: 25000
+      sha256: a756dc5d61ca0fd98db0ea95b9d703410f96ddbdbc63df0691ba1031ebed115d
+  original:
+    hackage: streamly-0.8.2
+- completed:
+    hackage: testcontainers-0.3.1.0@sha256:8f9c100652403b72a467eb005b1c936c7116e02938057bd5b6fd7cdc465b9532,2700
+    pantry-tree:
+      size: 747
+      sha256: 57d3891d7f17092873f0fd5a3b35590e479d7ad90ada7e566e01c8bac6decb69
+  original:
+    hackage: testcontainers-0.3.1.0@sha256:8f9c100652403b72a467eb005b1c936c7116e02938057bd5b6fd7cdc465b9532,2700
+- completed:
+    hackage: aeson-optics-1.1.1@sha256:ce4d6013aa878be4d25bca2b638a77ba53a86b9af905df8bcb3453880505d673,1687
+    pantry-tree:
+      size: 338
+      sha256: d57e6265f9dccef919a233a63875d8b3592ce06fcfb34bc0c4bb444b4ddae360
+  original:
+    hackage: aeson-optics-1.1.1@sha256:ce4d6013aa878be4d25bca2b638a77ba53a86b9af905df8bcb3453880505d673,1687
 snapshots:
 - completed:
-    sha256: 005f204647467d65c4ab549a5ca35d54b3d90a84a99a4ffc5d421a4018854fe2
-    size: 618509
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/19/10.yaml
-  original: lts-19.10
+    size: 607265
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/nightly/2022/6/9.yaml
+    sha256: 819ac07621dac5b2c320c45cb8c27f141f95114a1749b19b06d2c3606c79e839
+  original: nightly-2022-06-09

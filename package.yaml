@@ -16,10 +16,10 @@ synopsis:            A simple streamly wrapper for amqp
 category:            streamly, conduit, amqp, rabbitmq
 
 dependencies:
-- base
-- amqp
-- streamly
-- text
+- amqp >=0.19.1 && <0.23
+- base >=4.7 && <5
+- streamly >=0.7.2 && <=0.9
+- text >=1.2.4.0 && <3
 
 library:
   source-dirs: src
